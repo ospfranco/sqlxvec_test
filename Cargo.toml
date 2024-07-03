@@ -1,0 +1,21 @@
+[package]
+name = "sqlxtest"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sqlite-vec = "0.0.1-alpha.19"
+sqlx = { version = "0.7.4", features = [
+  "json",
+  "time",
+  "sqlite",
+  "runtime-tokio",
+] }
+libsqlite3-sys = { version = "=0.27.0", features = ["bundled"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1"
+thiserror = "1.0.61"
+time = "=0.3.36"
+log = "0.4.22"
+tokio = {version = "1.38.0", features = ['full']}
+env_logger = "0.11.3"
